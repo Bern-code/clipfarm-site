@@ -5,3 +5,4 @@ h1{font-size:1.8rem;margin:0 0 .2em}h2{font-size:1.15rem;margin-top:2em}
 .mute{color:var(--mute)}nav a{margin-right:1em}a{color:inherit}
 footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--line);font-size:.9rem;color:var(--mute)}
 code{word-break:break-all;background:var(--line);padding:2px 6px;border-radius:4px}
+.btn{display:inline-block;background:#fe2c55;color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-weight:600}

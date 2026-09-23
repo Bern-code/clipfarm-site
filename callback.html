@@ -3,7 +3,7 @@
 <div id="out" class="mute">No authorisation code in this URL.</div>
 <script>
 const p=new URLSearchParams(location.search),o=document.getElementById('out');
-if(p.get('code')){o.className='';o.innerHTML='<p>Copy this code back into the terminal:</p><p><code id="c"></code></p><button id="b">Copy</button>';
+if(p.get('code')){o.className='';o.innerHTML='<p>TikTok connected. Copy this code into Clipfarm to finish:</p><p><code id="c"></code></p><button id="b">Copy</button>';
 document.getElementById('c').textContent=p.get('code');
 document.getElementById('b').onclick=()=>navigator.clipboard.writeText(p.get('code')).then(()=>b.textContent='Copied');}
 else if(p.get('error')){o.textContent='Error: '+p.get('error')+' '+(p.get('error_description')||'');}
