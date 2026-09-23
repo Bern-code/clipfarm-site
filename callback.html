@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clipfarm Sign-in</title><link rel="stylesheet" href="style.css"></head><body>
+<h1>Sign-in callback</h1>
+<div id="out" class="mute">No authorisation code in this URL.</div>
+<script>
+const p=new URLSearchParams(location.search),o=document.getElementById('out');
+if(p.get('code')){o.className='';o.innerHTML='<p>Copy this code back into the terminal:</p><p><code id="c"></code></p><button id="b">Copy</button>';
+document.getElementById('c').textContent=p.get('code');
+document.getElementById('b').onclick=()=>navigator.clipboard.writeText(p.get('code')).then(()=>b.textContent='Copied');}
+else if(p.get('error')){o.textContent='Error: '+p.get('error')+' '+(p.get('error_description')||'');}
+</script>
+</body></html>
